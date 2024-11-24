@@ -50,6 +50,7 @@
     border-radius: 8px;
     opacity: 0;
     transition: transform 0.2s ease-out, opacity 0.3s ease;
+    z-index: 1;
   }
   
   /* Central Text (Next Site) */
@@ -59,21 +60,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.4s ease;
     color: white;
     font-size: 36px;
     text-align: center;
+    pointer-events: none; /* Make sure the text is non-interactive */
+    z-index: 20;
   }
   
   .center-text h1 {
     font-size: 48px;
+    transition: opacity 0.4s ease-in-out;
   }
   
-  .center-text:hover {
-    opacity: 1; /* Make it visible on hover */
-  }
-  
-  /* Hover effect for central text (Next Site) */
   .center-text:hover h1 {
     color: #FF5733;
   }
