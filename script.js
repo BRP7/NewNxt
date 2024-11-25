@@ -16,9 +16,8 @@ let currentCardIndex = 0; // Keeps track of which card to show
 function shuffleCards(mouseX, mouseY) {
   const card = cards[currentCardIndex];
 
-  // Move the card very close to the mouse (within 10px)
   card.style.opacity = 1; // Make the card visible
-  card.style.transform = `translate(${mouseX + 10}px, ${mouseY + 10}px)`; // 10px offset from the mouse
+  card.style.transform = `translate(${mouseX}px, ${mouseY}px)`; // 10px offset from the mouse
 
   // Once the card is visible for a short time, it goes behind
   setTimeout(() => {
